@@ -272,7 +272,7 @@ function Opening({ onComplete }) {
       position:"fixed", inset:0, background:"#080608",
       display:"flex", flexDirection:"column",
       alignItems:"center", justifyContent:"center",
-      padding:"48px 28px", zIndex:100,
+      padding:"48px 28px", zIndex:100, overflowY:"auto",
     }}>
       {phase === 0 && (
         <p style={{ color:"#1a0e10", fontSize:11, fontFamily:"Georgia,serif", letterSpacing:4, opacity: brightness > 0 ? 0 : 0.6 }}>
