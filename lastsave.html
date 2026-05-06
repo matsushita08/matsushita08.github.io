@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2週間半額体験キャンペーン | Gold's Gym 南船橋千葉</title>
+  <meta name="description" content="Gold's Gym 南船橋千葉の期間限定キャンペーン。通常6,600円が3,300円で2週間施設利用。初心者・40〜50代の方も安心。無料サポート充実。ららぽーとTOKYO-BAY 4F。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:       #C9A84C;
+      --gold-light: #F0D080;
+      --gold-dark:  #9A7A2E;
+      --black:      #111111;
+      --bg-dark:    #1A1A1A;
+      --bg-section: #222222;
+      --bg-alt:     #181818;
+      --text-main:  #F5F5F5;
+      --text-muted: #AAAAAA;
+      --red:        #D94040;
+      --radius:     12px;
+      --shadow:     0 4px 24px rgba(0,0,0,0.5);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'YuGothic', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    /* ===== ユーティリティ ===== */
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 80px 0; }
+    .section--alt { background: var(--bg-section); }
+
+    .aidma-stage {
+      display: inline-flex; align-items: center;
+      background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold); font-size: 11px; font-weight: 700;
+      letter-spacing: 0.18em; padding: 4px 12px; border-radius: 50px;
+      margin-bottom: 10px; text-transform: uppercase;
+    }
+
+    .section-label {
+      display: block; color: var(--gold); font-size: 13px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(24px, 4.5vw, 36px); font-weight: 900;
+      line-height: 1.4; margin-bottom: 16px;
+    }
+    .section-title span { color: var(--gold); }
+
+    .section-lead {
+      color: var(--text-muted); font-size: 16px;
+      max-width: 640px; margin-bottom: 48px; line-height: 1.85;
+    }
+
+    .divider {
+      width: 60px; height: 3px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      margin-bottom: 48px;
+    }
+
+    /* ===== フェードイン ===== */
+    .fade-in {
+      opacity: 0; transform: translateY(26px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in.delay-1 { transition-delay: 0.1s; }
+    .fade-in.delay-2 { transition-delay: 0.2s; }
+    .fade-in.delay-3 { transition-delay: 0.3s; }
+    .fade-in.delay-4 { transition-delay: 0.4s; }
+    .fade-in.delay-5 { transition-delay: 0.5s; }
+    .fade-in.delay-6 { transition-delay: 0.6s; }
+
+    /* ===== ヘッダー ===== */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(17,17,17,0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding: 10px 20px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .site-header__logo {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .header-logo-img { height: 32px; width: auto; object-fit: contain; }
+    .site-header__logo-text {
+      font-size: 12px; color: var(--text-muted); font-weight: 400;
+      line-height: 1.4;
+    }
+    .header-cta { display: none; }
+    @media (min-width: 600px) {
+      .header-cta {
+        display: inline-flex; align-items: center; gap: 6px;
+        background: var(--gold); color: var(--black);
+        font-size: 13px; font-weight: 700; padding: 9px 18px;
+        border-radius: 50px; text-decoration: none;
+        transition: background 0.2s, transform 0.2s; white-space: nowrap;
+      }
+      .header-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+    }
+
+    /* ===== スティッキーCTA ===== */
+    .sticky-cta {
+      display: block; position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+      color: var(--black); font-size: 15px; font-weight: 700;
+      text-align: center; padding: 14px 20px; text-decoration: none;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.4); transition: opacity 0.3s;
+    }
+    .sticky-cta.hidden { opacity: 0; pointer-events: none; }
+    @media (min-width: 768px) { .sticky-cta { display: none; } }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative; min-height: 100svh;
+      display: flex; align-items: center;
+      padding-top: 70px; overflow: hidden; background: var(--black);
+    }
+    .hero__bg {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        linear-gradient(135deg, rgba(10,10,10,0.93) 0%, rgba(10,10,10,0.76) 55%, rgba(10,10,10,0.88) 100%),
+        url('フリーウエイト.jpg') center/cover no-repeat;
+    }
+    .hero__glow {
+      position: absolute; top: 20%; right: -8%; width: 480px; height: 480px;
+      background: radial-gradient(circle, rgba(201,168,76,0.1) 0%, transparent 70%);
+      z-index: 0; pointer-events: none;
+    }
+    .hero__content { position: relative; z-index: 1; padding: 56px 0 100px; }
+
+    .hero__badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .hero__badge {
+      display: inline-block; background: var(--gold); color: var(--black);
+      font-size: 13px; font-weight: 700; letter-spacing: 0.08em;
+      padding: 6px 16px; border-radius: 50px;
+      animation: badgePulse 2.5s ease-in-out infinite;
+    }
+    .hero__badge--outline {
+      background: transparent; border: 1.5px solid var(--gold);
+      color: var(--gold); animation: none;
+    }
+    @keyframes badgePulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.5); }
+      50%       { box-shadow: 0 0 0 10px rgba(201,168,76,0); }
+    }
+
+    .hero__catch {
+      font-size: clamp(30px, 7.5vw, 60px); font-weight: 900;
+      line-height: 1.22; margin-bottom: 20px; letter-spacing: -0.01em;
+    }
+    .hero__catch .lead {
+      font-size: clamp(14px, 2.5vw, 18px); font-weight: 700;
+      color: var(--text-muted); display: block; margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+    .hero__catch em { display: block; color: var(--gold); font-style: normal; }
+
+    .hero__sub {
+      font-size: clamp(14px, 2.5vw, 16px); color: var(--text-muted);
+      margin-bottom: 32px; max-width: 500px;
+      border-left: 3px solid var(--gold-dark); padding-left: 14px;
+      line-height: 1.8;
+    }
+
+    .price-block {
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+      margin-bottom: 28px; padding: 18px 22px;
+      background: rgba(201,168,76,0.07); border: 1px solid rgba(201,168,76,0.22);
+      border-radius: var(--radius); max-width: 480px;
+    }
+    .price-block__original {
+      font-size: 17px; color: var(--text-muted);
+      text-decoration: line-through; text-decoration-color: var(--red);
+      text-decoration-thickness: 2px;
+    }
+    .price-block__arrow { font-size: 22px; color: var(--gold); }
+    .price-block__new { display: flex; flex-direction: column; }
+    .price-block__new-label { font-size: 11px; color: var(--gold); font-weight: 700; letter-spacing: 0.1em; }
+    .price-block__new-amount {
+      font-size: clamp(40px, 8.5vw, 64px); font-weight: 900;
+      color: var(--gold-light); line-height: 1;
+    }
+    .price-block__new-amount small { font-size: 0.38em; font-weight: 700; color: var(--gold); }
+    .price-block__period { font-size: 13px; color: var(--text-muted); align-self: flex-end; padding-bottom: 4px; }
+
+    .scarcity-bar {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 22px;
+      padding: 11px 16px; background: rgba(217,64,64,0.1);
+      border: 1px solid rgba(217,64,64,0.3); border-radius: 8px; max-width: 480px;
+    }
+    .scarcity-bar__dot {
+      width: 9px; height: 9px; background: var(--red); border-radius: 50%;
+      flex-shrink: 0; animation: dotBlink 1.2s ease-in-out infinite;
+    }
+    @keyframes dotBlink { 0%,100%{opacity:1} 50%{opacity:0.25} }
+    .scarcity-bar__text { font-size: 13px; font-weight: 700; color: #FF8080; line-height: 1.5; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--black); font-size: clamp(14px, 2.5vw, 17px); font-weight: 700;
+      padding: 18px 36px; border-radius: 50px; text-decoration: none;
+      border: none; cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.4); letter-spacing: 0.03em;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(201,168,76,0.55); }
+    .btn-primary .arrow { font-size: 1.1em; transition: transform 0.2s; }
+    .btn-primary:hover .arrow { transform: translateX(4px); }
+
+    .hero__note { margin-top: 16px; font-size: 12px; color: var(--text-muted); max-width: 480px; line-height: 1.7; }
+
+    /* ===== I — こんな方へ ===== */
+    .target-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 600px) { .target-grid { grid-template-columns: 1fr 1fr; } }
+
+    .target-card {
+      background: var(--bg-alt); border: 1px solid rgba(201,168,76,0.15);
+      border-left: 4px solid var(--gold); border-radius: var(--radius);
+      padding: 22px 18px; display: flex; gap: 14px; align-items: flex-start;
+    }
+    .target-card__icon { font-size: 28px; flex-shrink: 0; line-height: 1; margin-top: 3px; }
+    .target-card__text { font-size: 15px; line-height: 1.75; }
+    .target-card__text strong {
+      display: block; color: var(--gold); font-size: 13px; font-weight: 700;
+      margin-bottom: 3px; letter-spacing: 0.04em;
+    }
+
+    .interest-bridge {
+      margin-top: 44px; padding: 30px 26px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.03));
+      border: 1px solid rgba(201,168,76,0.25); border-radius: var(--radius); text-align: center;
+    }
+    .interest-bridge__title { font-size: clamp(17px, 3vw, 22px); font-weight: 900; margin-bottom: 10px; color: var(--gold-light); }
+    .interest-bridge__text { font-size: 15px; color: var(--text-muted); line-height: 1.8; }
+
+    /* ===== D — 強み ===== */
+    .strengths-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 600px) { .strengths-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .strengths-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .strength-card {
+      background: var(--bg-alt); border-radius: var(--radius);
+      border: 1px solid rgba(201,168,76,0.1); overflow: hidden;
+      transition: transform 0.22s, box-shadow 0.22s;
+    }
+    .strength-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.4); }
+    .strength-card__img { width: 100%; height: 180px; object-fit: cover; }
+    .strength-card__bar { height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+    .strength-card__body { padding: 20px 18px; }
+    .strength-card__icon { font-size: 26px; margin-bottom: 8px; display: block; }
+    .strength-card__title { font-size: 16px; font-weight: 700; color: var(--gold); margin-bottom: 8px; line-height: 1.4; }
+    .strength-card__text { font-size: 13px; color: var(--text-muted); line-height: 1.75; margin-bottom: 10px; }
+    .strength-card__badge {
+      display: inline-block; padding: 3px 10px;
+      background: rgba(201,168,76,0.12); border-radius: 50px;
+      font-size: 11px; color: var(--gold); font-weight: 700;
+    }
+
+    /* ===== D — フォトギャラリー ===== */
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+    }
+    @media (min-width: 640px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 900px) { .gallery-grid { grid-template-columns: repeat(4, 1fr); } }
+
+    .gallery-item { position: relative; overflow: hidden; border-radius: 8px; aspect-ratio: 4/3; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item__label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.82) 0%, transparent 100%);
+      padding: 18px 10px 8px; font-size: 12px; font-weight: 700; color: var(--text-main);
+    }
+
+    /* ===== D — 無料サポート ===== */
+    .support-steps { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 700px) { .support-steps { grid-template-columns: 1fr 1fr; } }
+
+    .support-step {
+      background: var(--bg-alt); border-radius: var(--radius);
+      border: 1px solid rgba(201,168,76,0.1); padding: 22px 20px;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .support-step__num {
+      flex-shrink: 0; width: 40px; height: 40px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--black); font-size: 17px; font-weight: 900;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    }
+    .support-step__title { font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
+    .support-step__text { font-size: 13px; color: var(--text-muted); line-height: 1.75; }
+
+    /* ===== D — 体験者の声 ===== */
+    .voice-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 640px) { .voice-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .voice-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .voice-card {
+      background: var(--bg-section); border-radius: var(--radius);
+      border: 1px solid rgba(201,168,76,0.12); padding: 24px 20px; position: relative;
+    }
+    .voice-card__quote {
+      position: absolute; top: 14px; right: 16px;
+      font-size: 40px; color: rgba(201,168,76,0.13); line-height: 1; font-family: Georgia, serif;
+    }
+    .voice-card__stars { color: var(--gold); font-size: 15px; letter-spacing: 2px; margin-bottom: 10px; }
+    .voice-card__text { font-size: 14px; line-height: 1.82; margin-bottom: 18px; color: var(--text-main); }
+    .voice-card__profile { display: flex; align-items: center; gap: 12px; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 14px; }
+    .voice-card__avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--gold-dark), var(--bg-alt)); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .voice-card__name { font-size: 13px; font-weight: 700; }
+    .voice-card__meta { font-size: 12px; color: var(--text-muted); }
+    .voice-card__result { display: inline-block; margin-top: 4px; background: rgba(201,168,76,0.12); color: var(--gold); font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 50px; }
+
+    /* 実績数字 */
+    .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid rgba(201,168,76,0.2); border-radius: var(--radius); overflow: hidden; margin-bottom: 48px; }
+    .stat-item { padding: 22px 12px; text-align: center; border-right: 1px solid rgba(201,168,76,0.12); }
+    .stat-item:last-child { border-right: none; }
+    .stat-item__number { font-size: clamp(24px, 5vw, 40px); font-weight: 900; color: var(--gold-light); line-height: 1; display: block; }
+    .stat-item__unit { font-size: 0.45em; font-weight: 700; color: var(--gold); }
+    .stat-item__label { font-size: 12px; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
+
+    /* ===== M — キャンペーン詳細 ===== */
+    .scarcity-banner {
+      margin-bottom: 26px; padding: 16px 20px;
+      background: rgba(217,64,64,0.1); border: 1.5px solid rgba(217,64,64,0.35);
+      border-radius: var(--radius); display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    }
+    .scarcity-banner__icon { font-size: 24px; }
+    .scarcity-banner__body { flex: 1; }
+    .scarcity-banner__title { font-size: 16px; font-weight: 700; color: #FF8080; margin-bottom: 2px; }
+    .scarcity-banner__sub { font-size: 13px; color: var(--text-muted); }
+    .scarcity-banner__cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--red); color: #fff; font-size: 13px; font-weight: 700;
+      padding: 9px 16px; border-radius: 50px; text-decoration: none;
+      white-space: nowrap; transition: opacity 0.2s;
+    }
+    .scarcity-banner__cta:hover { opacity: 0.85; }
+
+    .campaign-table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid rgba(201,168,76,0.2); }
+    .campaign-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    .campaign-table th { background: rgba(201,168,76,0.1); color: var(--gold); font-weight: 700; text-align: left; padding: 15px 20px; width: 150px; white-space: nowrap; border-bottom: 1px solid rgba(201,168,76,0.1); vertical-align: top; }
+    .campaign-table td { padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; line-height: 1.75; }
+    .campaign-table tr:last-child th, .campaign-table tr:last-child td { border-bottom: none; }
+    .price-highlight { font-size: 24px; font-weight: 900; color: var(--gold-light); }
+    .price-original { font-size: 14px; color: var(--text-muted); text-decoration: line-through; margin-left: 6px; }
+    .campaign-note { margin-top: 16px; font-size: 13px; color: var(--text-muted); padding-left: 1em; border-left: 3px solid rgba(201,168,76,0.3); line-height: 1.85; }
+
+    /* ===== M — スタジオ ===== */
+    .program-list { display: flex; flex-direction: column; gap: 10px; }
+    .program-row {
+      background: var(--bg-alt); border-radius: var(--radius);
+      border: 1px solid rgba(201,168,76,0.12); padding: 16px 18px;
+      display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;
+    }
+    .program-row__cat { font-size: 12px; color: var(--gold); font-weight: 700; letter-spacing: 0.08em; white-space: nowrap; flex-shrink: 0; }
+    .program-row__items { font-size: 14px; color: var(--text-main); line-height: 1.7; }
+
+    /* ===== M — FAQ ===== */
+    .faq-list { display: flex; flex-direction: column; gap: 10px; }
+    .faq-item { background: var(--bg-alt); border: 1px solid rgba(201,168,76,0.12); border-radius: var(--radius); overflow: hidden; }
+    .faq-item__q { display: flex; align-items: center; gap: 12px; padding: 18px 20px; cursor: pointer; user-select: none; font-size: 15px; font-weight: 700; transition: background 0.2s; }
+    .faq-item__q:hover { background: rgba(201,168,76,0.05); }
+    .faq-item__q-badge { flex-shrink: 0; width: 28px; height: 28px; background: var(--gold); color: var(--black); font-weight: 900; font-size: 13px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .faq-item__q-text { flex: 1; }
+    .faq-item__q-icon { font-size: 18px; color: var(--gold); transition: transform 0.3s; flex-shrink: 0; }
+    .faq-item.open .faq-item__q-icon { transform: rotate(45deg); }
+    .faq-item__a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-item.open .faq-item__a { max-height: 400px; }
+    .faq-item__a-inner { padding: 0 20px 20px 60px; font-size: 14px; color: var(--text-muted); line-height: 1.85; }
+
+    /* ===== M — アクセス ===== */
+    .access-wrap { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 700px) { .access-wrap { grid-template-columns: 1fr 1fr; align-items: start; } }
+
+    .access-photo { width: 100%; border-radius: var(--radius); object-fit: cover; }
+    .map-link {
+      display: inline-flex; align-items: center; gap: 6px; margin-top: 14px;
+      background: var(--gold); color: var(--black); font-size: 13px; font-weight: 700;
+      padding: 9px 18px; border-radius: 50px; text-decoration: none; transition: opacity 0.2s;
+    }
+    .map-link:hover { opacity: 0.85; }
+
+    .access-info { background: var(--bg-alt); border-radius: var(--radius); border: 1px solid rgba(201,168,76,0.12); overflow: hidden; }
+    .access-info__row { display: flex; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .access-info__row:last-child { border-bottom: none; }
+    .access-info__th { background: rgba(201,168,76,0.08); color: var(--gold); font-weight: 700; font-size: 12px; padding: 13px 14px; width: 80px; flex-shrink: 0; display: flex; align-items: flex-start; white-space: nowrap; }
+    .access-info__td { padding: 13px 16px; font-size: 14px; line-height: 1.75; }
+
+    /* ===== A — CTA ===== */
+    .cta-section { background: linear-gradient(135deg, #0d0d00 0%, #1c1500 50%, #111 100%); border-top: 1px solid rgba(201,168,76,0.2); }
+    .cta-section__inner { text-align: center; }
+    .cta-section__title { font-size: clamp(22px, 4vw, 36px); font-weight: 900; margin-bottom: 10px; }
+    .cta-section__title span { color: var(--gold); }
+    .cta-section__sub { color: var(--text-muted); font-size: 15px; margin-bottom: 10px; }
+
+    .trust-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+    .trust-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); border-radius: 50px; padding: 6px 14px; font-size: 13px; color: var(--gold); font-weight: 700; }
+
+    .cta-card { background: var(--bg-section); border: 1px solid rgba(201,168,76,0.2); border-radius: 16px; padding: 36px 28px; max-width: 540px; margin: 0 auto; box-shadow: var(--shadow); }
+    .cta-card__title { font-size: 17px; font-weight: 700; margin-bottom: 6px; color: var(--gold); }
+    .cta-card__sub { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+
+    .btn-cta-large {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; padding: 18px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--black); font-size: clamp(14px, 2.8vw, 17px); font-weight: 700;
+      border-radius: 50px; text-decoration: none;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.4); letter-spacing: 0.03em;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-cta-large:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(201,168,76,0.55); }
+    .btn-cta-large .arrow { font-size: 1.1em; transition: transform 0.2s; }
+    .btn-cta-large:hover .arrow { transform: translateX(4px); }
+
+    .cta-note { margin-top: 12px; font-size: 12px; color: var(--text-muted); text-align: center; line-height: 1.7; }
+
+    .tel-block { margin-top: 24px; padding: 20px; border: 1px dashed rgba(201,168,76,0.25); border-radius: var(--radius); text-align: center; }
+    .tel-block__label { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; }
+    .tel-block__number { font-size: 24px; font-weight: 900; color: var(--gold); letter-spacing: 0.08em; display: block; text-decoration: none; }
+    .tel-block__hours { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+    /* フッター */
+    .site-footer { background: var(--black); border-top: 1px solid rgba(255,255,255,0.06); padding: 36px 20px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    .footer-logo { height: 28px; width: auto; margin: 0 auto 10px; }
+    .site-footer a { color: var(--gold); text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="site-header__logo">
+      <img src="ロゴ.png" alt="Gold's Gym" class="header-logo-img">
+      <span class="site-header__logo-text">南船橋千葉 ／ ららぽーとTOKYO-BAY 4F</span>
+    </div>
+    <a href="https://www.goldsgym-membership.jp/kengaku/visits/entry?MODE=2" class="header-cta" target="_blank" rel="noopener noreferrer">
+      半額体験を申し込む →
+    </a>
+  </header>
+
+  <!-- スティッキーCTA（モバイル） -->
+  <a href="https://www.goldsgym-membership.jp/kengaku/visits/entry?MODE=2" class="sticky-cta" id="stickyCta" target="_blank" rel="noopener noreferrer">
+    ▶ 今すぐ半額体験を申し込む（3,300円）
+  </a>
+
+
+  <!-- ============================================================
+       A — Attention
+       ============================================================ -->
+  <section class="hero">
+    <div class="hero__bg" role="img" aria-label="Gold's Gym 南船橋 フリーウエイトエリア"></div>
+    <div class="hero__glow"></div>
+    <div class="container">
+      <div class="hero__content">
+
+        <div class="hero__badges fade-in">
+          <span class="hero__badge">🏷 期間限定キャンペーン</span>
+          <span class="hero__badge hero__badge--outline">未入会の方・初回限定</span>
+        </div>
+
+        <h1 class="hero__catch fade-in delay-1">
+          <span class="lead">身体を変える無料サポート</span>
+          2週間、体験してみませんか？
+        </h1>
+
+        <p class="hero__sub fade-in delay-2">
+          Gold's Gym 南船橋千葉 ─ スタッフが初日から丁寧にサポート。<br>
+          ジム未経験の方も、安心してスタートできます。
+        </p>
+
+        <div class="price-block fade-in delay-2">
+          <div class="price-block__original">通常 6,600円</div>
+          <div class="price-block__arrow">→</div>
+          <div class="price-block__new">
+            <span class="price-block__new-label">キャンペーン価格（税込）</span>
+            <span class="price-block__new-amount">3,300<small>円</small></span>
+          </div>
+          <div class="price-block__period">/ 2週間</div>
+        </div>
+
+        <div class="scarcity-bar fade-in delay-3">
+          <div class="scarcity-bar__dot"></div>
+          <p class="scarcity-bar__text">残り枠わずか ─ まずは3,300円で全てのサービス、サポートをお試しください</p>
+        </div>
+
+        <a href="https://www.goldsgym-membership.jp/kengaku/visits/entry?MODE=2" class="btn-primary fade-in delay-3" target="_blank" rel="noopener noreferrer">
+          今すぐ半額体験を申し込む <span class="arrow">→</span>
+        </a>
+
+        <p class="hero__note fade-in delay-4">
+          ※ 施設利用が前回から1年以上過ぎている方が対象です。2週間後に自動入会にはなりません。
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       I — Interest
+       ============================================================ -->
+  <section class="section section--alt" id="target">
+    <div class="container">
+      <span class="aidma-stage fade-in">I — Interest</span>
+      <span class="section-label fade-in" style="margin-top:10px;">こんな方へ</span>
+      <h2 class="section-title fade-in">初めてのジム、使い方やルールなど、<br><span>不安ではないですか？</span></h2>
+      <div class="divider fade-in"></div>
+
+      <div class="target-grid">
+        <div class="target-card fade-in delay-1">
+          <div class="target-card__icon">😮‍💨</div>
+          <div class="target-card__text">
+            <strong>体力の衰えが気になる</strong>
+            最近、階段を上がるだけで息が切れる。若い頃と違う体を感じている…
+          </div>
+        </div>
+        <div class="target-card fade-in delay-2">
+          <div class="target-card__icon">🚪</div>
+          <div class="target-card__text">
+            <strong>ジムの敷居が高く感じる</strong>
+            マシンの使い方がわからない。若い人ばかりで入りづらそう…
+          </div>
+        </div>
+        <div class="target-card fade-in delay-3">
+          <div class="target-card__icon">🔄</div>
+          <div class="target-card__text">
+            <strong>続けられるか自信がない</strong>
+            これまでも運動を始めようとして、続かなかった経験がある…
+          </div>
+        </div>
+        <div class="target-card fade-in delay-4">
+          <div class="target-card__icon">⏰</div>
+          <div class="target-card__text">
+            <strong>今から始めても遅くないか心配</strong>
+            40代・50代でジムを始めるのは遅すぎるのでは、と感じている…
+          </div>
+        </div>
+      </div>
+
+      <div class="interest-bridge fade-in">
+        <p class="interest-bridge__title">その一歩を、Gold's Gym 南船橋が一緒に踏み出します。</p>
+        <p class="interest-bridge__text">スタッフが初日から丁寧にサポートするので、ジム未経験でも安心。<br>まずは2週間、どんな変化があるか体験してみてください。</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       D — Desire ① 強み
+       ============================================================ -->
+  <section class="section" id="strengths">
+    <div class="container">
+      <span class="aidma-stage fade-in">D — Desire</span>
+      <span class="section-label fade-in" style="margin-top:10px;">Gold's Gym 南船橋千葉の強み</span>
+      <h2 class="section-title fade-in">他のジムにはない、<span>6つのポイント</span></h2>
+      <div class="divider fade-in"></div>
+
+      <div class="strengths-grid">
+
+        <div class="strength-card fade-in delay-1">
+          <img src="無料トレーニングサポート.png" alt="無料トレーニングサポート" class="strength-card__img">
+          <div class="strength-card__bar"></div>
+          <div class="strength-card__body">
+            <span class="strength-card__icon">🏋️</span>
+            <h3 class="strength-card__title">無料トレーニングサポートが充実</h3>
+            <p class="strength-card__text">全6回の初心者説明会からメニュー作成・栄養カウンセリングまで無料。プロのトレーナーが継続的にサポートします。</p>
+            <span class="strength-card__badge">全会員様 無料（無料トレーニングサポート）</span>
+          </div>
+        </div>
+
+        <div class="strength-card fade-in delay-2">
+          <img src="ららぽーとTOKYO-BAY North Gate.jpg" alt="ららぽーと駐車場" class="strength-card__img">
+          <div class="strength-card__bar"></div>
+          <div class="strength-card__body">
+            <span class="strength-card__icon">🅿️</span>
+            <h3 class="strength-card__title">駐車場2,000台以上・長時間無料</h3>
+            <p class="strength-card__text">ららぽーとの大型駐車場が使えるので車でのアクセスも快適。お買い物ついでに通えます。</p>
+            <span class="strength-card__badge">平日最大8時間 ／ 休日最大5時間 無料</span>
+          </div>
+        </div>
+
+        <div class="strength-card fade-in delay-3">
+          <img src="スタジオ1.png" alt="スタジオプログラム" class="strength-card__img">
+          <div class="strength-card__bar"></div>
+          <div class="strength-card__body">
+            <span class="strength-card__icon">💃</span>
+            <h3 class="strength-card__title">充実のスタジオプログラム（週50本以上）</h3>
+            <p class="strength-card__text">エアロ・ヨガ・ダンス・ピラティス・格闘技系など多彩なプログラムを毎日開催。スタジオレッスンは月会費に含まれます。</p>
+            <span class="strength-card__badge">会員様 追加料金なし</span>
+          </div>
+        </div>
+
+        <div class="strength-card fade-in delay-1">
+          <img src="HOTスタジオ.jpg" alt="HOTスタジオ" class="strength-card__img">
+          <div class="strength-card__bar"></div>
+          <div class="strength-card__body">
+            <span class="strength-card__icon">🌋</span>
+            <h3 class="strength-card__title">桜島溶岩石 HOTスタジオ</h3>
+            <p class="strength-card__text">本格的な桜島溶岩石を使用した温熱スタジオ。発汗・代謝アップ効果が高く、ダイエットにも最適です。</p>
+            <span class="strength-card__badge">女性会員様 1レッスン 200円</span>
+          </div>
+        </div>
+
+        <div class="strength-card fade-in delay-2">
+          <img src="岩盤浴.png" alt="岩盤浴" class="strength-card__img">
+          <div class="strength-card__bar"></div>
+          <div class="strength-card__body">
+            <span class="strength-card__icon">🧖‍♀️</span>
+            <h3 class="strength-card__title">岩盤浴（女性限定・無料）</h3>
+            <p class="strength-card__text">千葉県内のゴールドジムで唯一の岩盤浴施設。女性会員は無料でご利用いただけます。</p>
+            <span class="strength-card__badge">女性会員様 無料</span>
+          </div>
+        </div>
+
+        <div class="strength-card fade-in delay-3">
+          <img src="ドライサウナ.png" alt="ドライサウナ" class="strength-card__img">
+          <div class="strength-card__bar"></div>
+          <div class="strength-card__body">
+            <span class="strength-card__icon">🚿</span>
+            <h3 class="strength-card__title">シャワー＆ミストサウナ＆ドライサウナ完備</h3>
+            <p class="strength-card__text">ミストサウナは男女ともご利用可能。ドライサウナは男性専用。トレーニング後のリカバリーに最適です。</p>
+            <span class="strength-card__badge">全会員 無料（ドライサウナ）</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       D — Desire ② フォトギャラリー
+       ============================================================ -->
+  <section class="section section--alt" id="gallery">
+    <div class="container">
+      <span class="section-label fade-in">施設フォトギャラリー</span>
+      <h2 class="section-title fade-in">広々とした<span>本格的な施設</span>をご覧ください</h2>
+      <div class="divider fade-in"></div>
+
+      <div class="gallery-grid fade-in">
+        <div class="gallery-item">
+          <img src="南船橋正面.jpeg" alt="外観">
+          <div class="gallery-item__label">外観（ららぽーとTOKYO-BAY 4F）</div>
+        </div>
+        <div class="gallery-item">
+          <img src="ジムエリア３.jpg" alt="マシンエリア">
+          <div class="gallery-item__label">マシンエリア</div>
+        </div>
+        <div class="gallery-item">
+          <img src="ジムエリア2.jpg" alt="トレーニングフロア">
+          <div class="gallery-item__label">トレーニングフロア</div>
+        </div>
+        <div class="gallery-item">
+          <img src="カーディオエリア1.png" alt="カーディオエリア">
+          <div class="gallery-item__label">カーディオエリア</div>
+        </div>
+        <div class="gallery-item">
+          <img src="フリーウエイト.jpg" alt="フリーウエイトエリア">
+          <div class="gallery-item__label">フリーウエイトエリア</div>
+        </div>
+        <div class="gallery-item">
+          <img src="南船橋パワーラック.webp" alt="パワーラックエリア">
+          <div class="gallery-item__label">パワーラックエリア</div>
+        </div>
+        <div class="gallery-item">
+          <img src="女性エリア.jpeg" alt="女性専用エリア">
+          <div class="gallery-item__label">女性専用エリア</div>
+        </div>
+        <div class="gallery-item">
+          <img src="HOTスタジオ.jpg" alt="HOTスタジオ">
+          <div class="gallery-item__label">HOTスタジオ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       D — Desire ③ 無料トレーニングサポート
+       ============================================================ -->
+  <section class="section" id="support">
+    <div class="container">
+      <span class="section-label fade-in">無料サポート</span>
+      <h2 class="section-title fade-in">入会後もずっと続く、<span>4段階の無料サポート</span></h2>
+      <p class="section-lead fade-in">「続けられるか不安」という方にこそ、Gold's Gymのサポート体制が頼りになります。プロのトレーナーによる手厚いサポートが、すべて無料です。</p>
+      <div class="divider fade-in"></div>
+
+      <div class="support-steps">
+        <div class="support-step fade-in delay-1">
+          <div class="support-step__num">1</div>
+          <div>
+            <p class="support-step__title">初心者トレーニング説明会（全6回）</p>
+            <p class="support-step__text">入会直後から全6回の説明会でトレーニングの基本をマスター。カウンセリング・血圧測定・実技指導をセットで実施します。</p>
+          </div>
+        </div>
+        <div class="support-step fade-in delay-2">
+          <div class="support-step__num">2</div>
+          <div>
+            <p class="support-step__title">ビギナーサポート</p>
+            <p class="support-step__text">説明会終了後も、トレーニングメニューの作成・マシン説明・栄養カウンセリングを継続。モチベーション維持まで支援します。</p>
+          </div>
+        </div>
+        <div class="support-step fade-in delay-3">
+          <div class="support-step__num">3</div>
+          <div>
+            <p class="support-step__title">オリジナルサポート</p>
+            <p class="support-step__text">トレーニングに慣れてきたら、目標（ダイエット・筋力アップ・健康維持）に合わせた個別メニューを随時作成・更新します。</p>
+          </div>
+        </div>
+        <div class="support-step fade-in delay-4">
+          <div class="support-step__num">4</div>
+          <div>
+            <p class="support-step__title">個人別メニュー（いつでも対応）</p>
+            <p class="support-step__text">スタッフに声をかけるだけで、その場でスポット対応。「このマシンの使い方は？」「今日はどんな種目をすべき？」も気軽に聞けます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       D — Desire ④ 体験者の声
+       ============================================================ -->
+  <section class="section section--alt" id="voices">
+    <div class="container">
+      <span class="section-label fade-in">体験者の声</span>
+      <h2 class="section-title fade-in">同じ悩みを抱えていた方が、<span>こう変わりました。</span></h2>
+      <div class="divider fade-in"></div>
+
+      <div class="stats-row fade-in">
+        <div class="stat-item">
+          <span class="stat-item__number">98<span class="stat-item__unit">%</span></span>
+          <p class="stat-item__label">体験者の<br>満足度</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__number">40<span class="stat-item__unit">代〜</span></span>
+          <p class="stat-item__label">会員の約半数が<br>40代以上</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__number">2<span class="stat-item__unit">週間</span></span>
+          <p class="stat-item__label">体の変化を<br>感じるまでの期間</p>
+        </div>
+      </div>
+
+      <div class="voice-grid">
+        <div class="voice-card fade-in delay-1">
+          <div class="voice-card__quote">"</div>
+          <div class="voice-card__stars">★★★★★</div>
+          <p class="voice-card__text">健康診断で引っ掛かり、ゴールドジムに通い始めました。初日から無料サポートを受け、2週間の体験で続けられると確信。今では10kgほど痩せました。</p>
+          <div class="voice-card__profile">
+            <div class="voice-card__avatar">👨</div>
+            <div>
+              <p class="voice-card__name">Y・K さん</p>
+              <p class="voice-card__meta">50代・男性 / ジム初体験</p>
+              <span class="voice-card__result">→ 体験後に正式入会</span>
+            </div>
+          </div>
+        </div>
+        <div class="voice-card fade-in delay-2">
+          <div class="voice-card__quote">"</div>
+          <div class="voice-card__stars">★★★★★</div>
+          <p class="voice-card__text">若い人や本格的に鍛えている人ばかりだと思って不安でしたが、実際は同世代の方や初心者の方も多く、とても安心して通えています。週3回続けたところ、長年悩んでいた腰痛がかなり楽になりました。</p>
+          <div class="voice-card__profile">
+            <div class="voice-card__avatar">👩</div>
+            <div>
+              <p class="voice-card__name">T・M さん</p>
+              <p class="voice-card__meta">40代・女性 / 運動が苦手</p>
+              <span class="voice-card__result">→ 腰痛が改善</span>
+            </div>
+          </div>
+        </div>
+        <div class="voice-card fade-in delay-3">
+          <div class="voice-card__quote">"</div>
+          <div class="voice-card__stars">★★★★★</div>
+          <p class="voice-card__text">「続けられるか不安」と相談したら、無理のないペースでメニューを組んでもらえました。今まで何度も途中でやめてきたのに、今回は2週間きちんと通えました。</p>
+          <div class="voice-card__profile">
+            <div class="voice-card__avatar">👩</div>
+            <div>
+              <p class="voice-card__name">A・S さん</p>
+              <p class="voice-card__meta">20代・女性 / 過去に挫折経験あり</p>
+              <span class="voice-card__result">→ 入会し、6ヶ月目達成</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       M — Memory ① キャンペーン詳細
+       ============================================================ -->
+  <section class="section" id="campaign">
+    <div class="container">
+      <span class="aidma-stage fade-in">M — Memory</span>
+      <span class="section-label fade-in" style="margin-top:10px;">キャンペーン詳細</span>
+      <h2 class="section-title fade-in">半額体験キャンペーン<span>詳細</span></h2>
+      <div class="divider fade-in"></div>
+
+      <div class="scarcity-banner fade-in">
+        <div class="scarcity-banner__icon">⏰</div>
+        <div class="scarcity-banner__body">
+          <p class="scarcity-banner__title">残り枠わずか ─ 定員になり次第受付終了</p>
+          <p class="scarcity-banner__sub">お早めにお申し込みください。</p>
+        </div>
+        <a href="https://www.goldsgym-membership.jp/kengaku/visits/entry?MODE=2" class="scarcity-banner__cta" target="_blank" rel="noopener noreferrer">今すぐ申し込む →</a>
+      </div>
+
+      <div class="campaign-table-wrap fade-in">
+        <table class="campaign-table">
+          <tbody>
+            <tr>
+              <th>キャンペーン期間</th>
+              <td>2026年5月16日（土）〜 2026年5月31日（日）<br>
+                <small style="color:var(--text-muted);font-size:12px;">※ 定員50名に達し次第終了</small>
+              </td>
+            </tr>
+            <tr>
+              <th>料金</th>
+              <td>
+                <span class="price-highlight">3,300円</span>（税込）<span class="price-original">通常 6,600円</span><br>
+                <small style="color:var(--text-muted);font-size:12px;">2週間（14日間）の施設利用料 ─ <strong style="color:var(--gold);">50%OFF</strong></small>
+              </td>
+            </tr>
+            <tr>
+              <th>対象</th>
+              <td>
+                ・未入会の方（過去にご入会のなかった方）<br>
+                ・施設利用が過去1年ない方<br>
+                ・1名につき1回まで<br>
+                ・18歳以上の方
+              </td>
+            </tr>
+            <tr>
+              <th>利用施設</th>
+              <td>トレーニングエリア・無料サポート・スタジオ・ロッカー・シャワーなど<br>
+                <small style="color:var(--text-muted);font-size:12px;">※ HOTスタジオは都度200円</small>
+              </td>
+            </tr>
+            <tr>
+              <th>申し込み方法</th>
+              <td>下部ボタンより公式Webフォームから事前予約<br>
+                <small style="color:var(--text-muted);font-size:12px;">※ お電話でのお問い合わせも承ります（047-495-2525）</small>
+              </td>
+            </tr>
+            <tr>
+              <th>支払い方法</th>
+              <td>クレジットカード / 現金 / PayPay / 交通系IC（フロントにて）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="campaign-note fade-in">
+        ※ 2週間体験後の入会は任意です。自動的に入会契約となることはありません。<br>
+        ※ キャンペーン内容・期間は予告なく変更・終了となる場合があります。
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       M — Memory ② スタジオプログラム
+       ============================================================ -->
+  <section class="section section--alt" id="programs">
+    <div class="container">
+      <span class="section-label fade-in">スタジオプログラム</span>
+      <h2 class="section-title fade-in">週7日、多彩な<span>スタジオレッスン</span>が楽しめます</h2>
+      <p class="section-lead fade-in">月会費に含まれるスタジオレッスン（HOTスタジオは1レッスン200円）。初心者向けから上級者向けまで幅広くご用意しています。</p>
+      <div class="divider fade-in"></div>
+
+      <div class="program-list fade-in">
+        <div class="program-row">
+          <span class="program-row__cat">エアロビクス（ステップ）系</span>
+          <span class="program-row__items">エアロ45・エアロ60・エアロサーキット・STEP入門・STEP45</span>
+        </div>
+        <div class="program-row">
+          <span class="program-row__cat">ダンス系</span>
+          <span class="program-row__items">ZUMBA・ジャズダンス・HOUSE・フラダンス・RITMOS・SALSATHION・HIP HOP・MEGADANZ・バレエ（初中級）</span>
+        </div>
+        <div class="program-row">
+          <span class="program-row__cat">ヨガ・コンディショニング系</span>
+          <span class="program-row__items">ヴィンサヨガ・親ヨガ・骨格ヨガ・ピラティス・ボディコンディショニング・ヒーリングヨガ・骨盤コンディショニング</span>
+        </div>
+        <div class="program-row">
+          <span class="program-row__cat">格闘技・筋トレ系</span>
+          <span class="program-row__items">RADICAL POWER・FIGHT DO・カーディオFキックボクシング・GGX・ボディシェイプ</span>
+        </div>
+      </div>
+
+      <p style="margin-top:16px; font-size:13px; color:var(--text-muted);">※ HOTスタジオは別途1レッスン200円。スケジュールは月ごとに更新されます。</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       M — Memory ③ FAQ
+       ============================================================ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <span class="section-label fade-in">よくある質問</span>
+      <h2 class="section-title fade-in">初めての方からの<span>よくあるご質問</span></h2>
+      <div class="divider fade-in"></div>
+
+      <div class="faq-list fade-in">
+
+        <div class="faq-item">
+          <div class="faq-item__q" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-item__q-badge">Q</span>
+            <span class="faq-item__q-text">ジムが初めてでも大丈夫ですか？</span>
+            <span class="faq-item__q-icon">+</span>
+          </div>
+          <div class="faq-item__a">
+            <div class="faq-item__a-inner">まったく問題ありません。入会後は全6回の初心者トレーニング説明会で基礎からサポートします。マシンの使い方から体の動かし方まで、丁寧にご説明します。</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-item__q" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-item__q-badge">Q</span>
+            <span class="faq-item__q-text">服装や持ち物はどうすればいいですか？</span>
+            <span class="faq-item__q-icon">+</span>
+          </div>
+          <div class="faq-item__a">
+            <div class="faq-item__a-inner">動きやすい服装とスポーツシューズ（室内用）をご用意ください。タオルと飲み物もあると便利です。ロッカー・シャワーもご利用いただけますので、着替えは施設内でできます。</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-item__q" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-item__q-badge">Q</span>
+            <span class="faq-item__q-text">2週間後に自動で入会になりますか？</span>
+            <span class="faq-item__q-icon">+</span>
+          </div>
+          <div class="faq-item__a">
+            <div class="faq-item__a-inner">なりません。2週間の体験期間終了後、入会するかどうかはお客様のご判断です。無理な勧誘は一切行いません。続けたい場合はスタッフにお声がけいただくだけで手続きできます。</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-item__q" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-item__q-badge">Q</span>
+            <span class="faq-item__q-text">駐車場はありますか？</span>
+            <span class="faq-item__q-icon">+</span>
+          </div>
+          <div class="faq-item__a">
+            <div class="faq-item__a-inner">ららぽーとTOKYO-BAYの駐車場（2,000台以上）をご利用いただけます。平日は最大8時間、休日は最大5時間無料です。お車でのご来館も大変便利です。</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-item__q" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-item__q-badge">Q</span>
+            <span class="faq-item__q-text">体験後の料金プランはどうなっていますか？</span>
+            <span class="faq-item__q-icon">+</span>
+          </div>
+          <div class="faq-item__a">
+            <div class="faq-item__a-inner">入会後の月会費は用途に合わせて選べます。平日昼間のデイタイム（9,900円）、いつでも通えるフルタイム（11,550円）など。入会金は5,500円ですが、5月限定キャンペーンで0円になります。</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       M — Memory ④ アクセス・営業時間
+       ============================================================ -->
+  <section class="section section--alt" id="access">
+    <div class="container">
+      <span class="section-label fade-in">アクセス・営業時間</span>
+      <h2 class="section-title fade-in">ゴールドジム <span>南船橋千葉店</span></h2>
+      <div class="divider fade-in"></div>
+
+      <div class="access-wrap fade-in">
+        <div>
+          <img src="南船橋正面.jpeg" alt="Gold's Gym 南船橋千葉 外観" class="access-photo">
+          <a href="https://maps.google.com/?q=千葉県船橋市浜町2-2-7+ゴールドジム南船橋千葉" class="map-link" target="_blank" rel="noopener noreferrer">
+            📍 Google マップで開く
+          </a>
+        </div>
+
+        <div class="access-info">
+          <div class="access-info__row">
+            <div class="access-info__th">住所</div>
+            <div class="access-info__td">〒273-0012<br>千葉県船橋市浜町2-2-7<br>ららぽーとTOKYO-BAY<br>North Gate 4F</div>
+          </div>
+          <div class="access-info__row">
+            <div class="access-info__th">電話</div>
+            <div class="access-info__td"><a href="tel:0474952525" style="color:var(--gold);text-decoration:none;font-weight:700;">047-495-2525</a></div>
+          </div>
+          <div class="access-info__row">
+            <div class="access-info__th">営業時間</div>
+            <div class="access-info__td">
+              月〜土　7:00 〜 23:00<br>
+              日　　　9:00 〜 20:00<br>
+              <small style="color:var(--text-muted);">祝日は該当曜日と同じ</small>
+            </div>
+          </div>
+          <div class="access-info__row">
+            <div class="access-info__th">定休日</div>
+            <div class="access-info__td">第2月曜日・夏季・年末年始</div>
+          </div>
+          <div class="access-info__row">
+            <div class="access-info__th">電車</div>
+            <div class="access-info__td">
+              JR京葉線「南船橋駅」徒歩約10分<br>
+              京成本線「船橋競馬場駅」徒歩約5分
+            </div>
+          </div>
+          <div class="access-info__row">
+            <div class="access-info__th">駐車場</div>
+            <div class="access-info__td">
+              ららぽーと駐車場（2,000台以上）<br>
+              平日 最大8時間無料<br>
+              休日 最大5時間無料
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       A — Action
+       ============================================================ -->
+  <section class="section cta-section" id="form">
+    <div class="container">
+      <div class="cta-section__inner">
+        <span class="aidma-stage fade-in">A — Action</span>
+        <h2 class="cta-section__title fade-in" style="margin-top:12px;">
+          まずは<span>2週間</span>、体験してみませんか？
+        </h2>
+        <p class="cta-section__sub fade-in">半額3,300円・入会不要・勧誘なし。</p>
+
+        <div class="trust-row fade-in">
+          <span class="trust-badge">✓ 自動入会なし</span>
+          <span class="trust-badge">✓ 無理な勧誘なし</span>
+          <span class="trust-badge">✓ 初日からスタッフがサポート</span>
+          <span class="trust-badge">✓ 駐車場最大8時間無料</span>
+        </div>
+
+        <div class="cta-card fade-in">
+          <p class="cta-card__title">📝 体験予約フォームへ</p>
+          <p class="cta-card__sub">Gold's Gym公式の予約フォームページへ移動します。</p>
+
+          <a href="https://www.goldsgym-membership.jp/kengaku/visits/entry?MODE=2" class="btn-cta-large" target="_blank" rel="noopener noreferrer">
+            体験予約フォームへ進む（3,300円 / 2週間） <span class="arrow">→</span>
+          </a>
+
+          <p class="cta-note">※ 未入会の方・前回のご利用から1年空いている方が対象です。</p>
+
+          <div class="tel-block">
+            <p class="tel-block__label">お電話でのご相談も歓迎です</p>
+            <a href="tel:0474952525" class="tel-block__number">📞 047-495-2525</a>
+            <p class="tel-block__hours">月〜土 7:00〜23:00 ／ 日 9:00〜20:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <img src="ロゴ.png" alt="Gold's Gym" class="footer-logo">
+    <p>南船橋千葉</p>
+    <p style="margin-top:8px;">
+      〒273-0012 千葉県船橋市浜町2-2-7 ららぽーとTOKYO-BAY North Gate 4F<br>
+      TEL: <a href="tel:0474952525">047-495-2525</a>
+      Instagram: <a href="https://www.instagram.com/goldsgym.minamifunabashichiba/" target="_blank" rel="noopener noreferrer">@goldsgym.minamifunabashichiba</a>
+    </p>
+    <p style="margin-top:12px;">
+      <a href="#">プライバシーポリシー</a> ｜ <a href="#">特定商取引法に基づく表記</a>
+    </p>
+    <p style="margin-top:12px; font-size:12px;">© 2026 Gold's Gym 南船橋千葉. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    /* スクロールフェードイン */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    /* Heroは即時フェードイン */
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.hero .fade-in').forEach(el => el.classList.add('visible'));
+    });
+
+    /* FAQアコーディオン */
+    document.querySelectorAll('.faq-item__q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+      btn.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+      });
+    });
+
+    /* スティッキーCTA */
+    new IntersectionObserver(([entry]) => {
+      document.getElementById('stickyCta').classList.toggle('hidden', entry.isIntersecting);
+    }, { threshold: 0 }).observe(document.querySelector('.hero'));
+  </script>
+</body>
+</html>
